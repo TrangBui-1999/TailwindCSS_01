@@ -187,7 +187,9 @@ function Header({ navigation }) {
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:text-gray-200">
               This is the experiment website, which is used to demonstate 3D
               technique.{" "}
-              <a href="#" className="font-semibold text-indigo-600">
+              <a
+                href="https://sites.google.com/view/trangbuiworkshowroom/3d"
+                className="font-semibold text-indigo-600">
                 <span className="absolute inset-0" aria-hidden="true" />
                 Read more <span aria-hidden="true">&rarr;</span>
               </a>
@@ -200,10 +202,15 @@ function Header({ navigation }) {
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-white">
               I am a passionate web developer with a strong background in
               creating dynamic and user-friendly websites. This is the website
-              with mixing of threeJS and ReactFiber framework with the help of
-              TailwindCSS. I am constantly expanding my skill set and staying
-              up-to-date with the latest trends and technologies in the
-              industry.
+              with mixing of{" "}
+              <strong class="underline decoration-sky-500">threeJS</strong> and{" "}
+              <strong class="underline decoration-indigo-500">
+                React Fiber
+              </strong>{" "}
+              framework with the help of{" "}
+              <strong class="underline decoration-pink-500">TailwindCSS</strong>
+              . I am constantly expanding my skill set and staying up-to-date
+              with the latest trends and technologies in the industry.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
@@ -213,7 +220,7 @@ function Header({ navigation }) {
                 Download CV
               </a>
               <a
-                href="#"
+                href="https://3d-movement.vercel.app/"
                 className="text-sm font-semibold leading-6 text-gray-900 dark:text-white ">
                 Learn more <span aria-hidden="true">→</span>
               </a>

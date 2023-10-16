@@ -17,7 +17,7 @@ const posts = [
     category: { title: "UX", href: "#" },
     author: {
       name: "Trang Bui",
-      role: "Frontend Developer",
+      role: "UX Reasearcher",
       href: "https://www.linkedin.com/in/trang-bui-profiles/",
       imageUrl: "./avatar.jpg",
     },
@@ -53,7 +53,7 @@ const posts = [
     ],
     author: {
       name: "Trang Bui",
-      role: "Frontend Developer",
+      role: "Web Development",
       href: "https://www.linkedin.com/in/trang-bui-profiles/",
       imageUrl: "./avatar.jpg",
     },
@@ -62,10 +62,16 @@ const posts = [
 ];
 
 const navigation = [
-  { name: "Home", href: "#" },
-  { name: "Demo", href: "#" },
+  {
+    name: "Home",
+    href: "https://sites.google.com/view/trangbuiworkshowroom/trang-ch%E1%BB%A7",
+  },
+  { name: "Demo", href: "#Project" },
   { name: "Skills", href: "#" },
-  { name: "About me", href: "#" },
+  {
+    name: "About me",
+    href: "https://sites.google.com/view/trangbuiworkshowroom/trang-ch%E1%BB%A7",
+  },
 ];
 function App() {
   return (
@@ -83,16 +89,18 @@ function App() {
                 Learn how to grow skills with self-development projects.
               </p>
             </div>
-            <div className="mx-auto mt-5 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-8 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+            <div
+              id="Project"
+              className="mx-auto mt-5 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-8 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {posts.map((post) => {
                 const count = post.category.length >= 2;
                 return (
                   <article
                     key={post.id}
-                    className="dark:bg-blue-900 dark:border-4 dark:border-white flex max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl flex-col items-start justify-between ">
+                    className="dark:bg-neon-purple dark:border-2 dark:border-white flex max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl flex-col items-start justify-between ">
                     <div class="md:shrink-0 pb-3">
                       <img
-                        class="h-48 w-full object-cover md:h-full "
+                        class="h-48 w-96 object-cover aspect-auto"
                         src={post.imageBig}
                         alt=""
                       />
@@ -124,7 +132,7 @@ function App() {
                       )}
                     </div>
                     <div className="group relative px-3">
-                      <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-50 dark:text-yellow-400">
+                      <h3 className="mt-3 text-lg font-semibold leading-6 text-neon-purple group-hover:text-black dark:text-dark-purple dark:hover:text-black">
                         <a href={post.href}>
                           <span className="absolute inset-0" />
                           {post.title}
@@ -134,7 +142,7 @@ function App() {
                         {post.description}
                       </p>
                     </div>
-                    <div className="relative mt-8 flex items-center gap-x-4 self-center ">
+                    <div className="relative mt-8 mb-3 flex items-center gap-x-4 self-center ">
                       <img
                         src={post.author.imageUrl}
                         alt=""
